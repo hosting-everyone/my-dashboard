@@ -13,6 +13,16 @@ export const profile = createI18n(provider, {
     'dev mode': 'Developer Mode',
     'dev mode description': 'Used for debugging and testing',
   },
+  nl: {
+    logout: common.translations.en.logout,
+    language: 'Taal',
+    'language description': 'Kies je Taal',
+    settings: 'Instellingen',
+    'dark mode': 'Donkere Modus',
+    'dark mode description': 'Zet Donkere Modus aan om je Ogen the beschermen',
+    'dev mode': 'Developer Mode',
+    'dev mode description': 'Gebruik dit om the Debuggen en the Testen',
+  },
   cn: {
     logout: common.translations.cn.logout,
     language: '你的語言',
