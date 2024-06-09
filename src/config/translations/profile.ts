@@ -2,9 +2,29 @@ import { createI18n } from '@/utils/i18n';
 import { common } from './common';
 import { provider } from './provider';
 
-export const profile = createI18n(provider, {
+// Define the shape of the profile translations
+interface ProfileTranslations {
+  logout: string;
+  language: string;
+  'language description': string;
+  settings: string;
+  'dark mode': string;
+  'dark mode description': string;
+  'dev mode': string;
+  'dev mode description': string;
+}
+
+// Define the shape of the i18n configuration
+interface I18nConfig {
+  en: ProfileTranslations;
+  nl: ProfileTranslations;
+  cn: ProfileTranslations;
+}
+
+// Create the profile translations using createI18n function
+export const profile = createI18n<I18nConfig>(provider, {
   en: {
-    logout: common.translations.en.logout,
+    logout: common.en.logout,
     language: 'Language',
     'language description': 'Select your language',
     settings: 'Settings',
@@ -14,17 +34,17 @@ export const profile = createI18n(provider, {
     'dev mode description': 'Used for debugging and testing',
   },
   nl: {
-    logout: common.translations.nl.logout,
+    logout: common.nl.logout,
     language: 'Taal',
     'language description': 'Kies je Taal',
     settings: 'Instellingen',
     'dark mode': 'Donkere Modus',
-    'dark mode description': 'Zet Donkere Modus aan om je Ogen the beschermen',
+    'dark mode description': 'Zet Donkere Modus aan om je Ogen te beschermen',
     'dev mode': 'Developer Mode',
-    'dev mode description': 'Gebruik dit om the Debuggen en the Testen',
+    'dev mode description': 'Gebruik dit om te Debuggen en te Testen',
   },
   cn: {
-    logout: common.translations.cn.logout,
+    logout: common.cn.logout,
     language: '你的語言',
     'language description': '選擇你的語言',
     settings: '設置',
