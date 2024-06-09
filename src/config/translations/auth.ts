@@ -1,7 +1,19 @@
 import { provider } from './provider';
 import { createI18n } from '@/utils/i18n';
 
-export const auth = createI18n(provider, {
+interface AuthTranslations {
+  login: string;
+  'login description': string;
+  login_bn: string;
+}
+
+interface I18nConfig {
+  en: AuthTranslations;
+  nl: AuthTranslations;
+  cn: AuthTranslations;
+}
+
+export const auth = createI18n<I18nConfig>(provider, {
   en: {
     login: 'Sign in',
     'login description': 'Login and start using our bot today',
