@@ -1,7 +1,50 @@
 import { provider } from './provider';
 import { createI18n } from '@/utils/i18n';
 
-export const dashboard = createI18n(provider, {
+// Define the shape of the nested invite object
+interface InviteTranslations {
+  title: string;
+  description: string;
+  bn: string;
+}
+
+// Define the shape of the nested servers object
+interface ServersTranslations {
+  title: string;
+  description: string;
+}
+
+// Define the shape of the nested vc object
+interface VCTranslations {
+  create: string;
+  'created channels': string;
+}
+
+// Define the shape of the nested command object
+interface CommandTranslations {
+  title: string;
+  description: string;
+}
+
+// Define the shape of the dashboard translations
+interface DashboardTranslations {
+  pricing: string;
+  learn_more: string;
+  invite: InviteTranslations;
+  servers: ServersTranslations;
+  vc: VCTranslations;
+  command: CommandTranslations;
+}
+
+// Define the shape of the i18n configuration
+interface I18nConfig {
+  en: DashboardTranslations;
+  nl: DashboardTranslations;
+  cn: DashboardTranslations;
+}
+
+// Create the dashboard translations using createI18n function
+export const dashboard = createI18n<I18nConfig>(provider, {
   en: {
     pricing: 'Pricing',
     learn_more: 'Learn More',
@@ -23,7 +66,7 @@ export const dashboard = createI18n(provider, {
       description: 'Use of commands of your server',
     },
   },
-    nl: {
+  nl: {
     pricing: 'Pricing',
     learn_more: 'Learn More',
     invite: {
