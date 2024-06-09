@@ -14,7 +14,7 @@ export const profile = createI18n(provider, {
     'dev mode description': 'Used for debugging and testing',
   },
   nl: {
-    logout: common.translations.en.logout,
+    logout: common.translations.nl.logout,
     language: 'Taal',
     'language description': 'Kies je Taal',
     settings: 'Instellingen',
