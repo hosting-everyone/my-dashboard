@@ -83,7 +83,7 @@ const ProfilePage: NextPageWithLayout = () => {
             onChange={(e) => setDevMode(e.target.checked)}
           />
           <FormControl>
-            <Box mb={2}>
+            <Box mb={3}>
               <FormLabel fontSize="md" fontWeight="medium" m={0}>
                 {t.language}
               </FormLabel>
