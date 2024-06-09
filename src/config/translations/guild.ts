@@ -1,7 +1,44 @@
 import { provider } from './provider';
 import { createI18n } from '@/utils/i18n';
 
-export const guild = createI18n(provider, {
+// Define the shape of the nested banner object
+interface BannerTranslations {
+  title: string;
+  description: string;
+}
+
+// Define the shape of the nested error object
+interface ErrorTranslations {
+  'not found': string;
+  'not found description': string;
+  load: string;
+}
+
+// Define the shape of the nested bn object
+interface BNTranslations {
+  'enable feature': string;
+  'config feature': string;
+  invite: string;
+  settings: string;
+}
+
+// Define the shape of the guild translations
+interface GuildTranslations {
+  features: string;
+  banner: BannerTranslations;
+  error: ErrorTranslations;
+  bn: BNTranslations;
+}
+
+// Define the shape of the i18n configuration
+interface I18nConfig {
+  en: GuildTranslations;
+  nl: GuildTranslations;
+  cn: GuildTranslations;
+}
+
+// Create the guild translations using createI18n function
+export const guild = createI18n<I18nConfig>(provider, {
   en: {
     features: 'Features',
     banner: {
@@ -20,7 +57,7 @@ export const guild = createI18n(provider, {
       settings: 'Settings',
     },
   },
-    nl: {
+  nl: {
     features: 'Features',
     banner: {
       title: 'Getting Started',
