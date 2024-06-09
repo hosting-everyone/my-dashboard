@@ -1,7 +1,38 @@
 import { provider } from './provider';
 import { createI18n } from '@/utils/i18n';
 
-export const feature = createI18n(provider, {
+// Define the shape of the nested error object
+interface ErrorTranslations {
+  'not enabled': string;
+  'not enabled description': string;
+  'not found': string;
+  'not found description': string;
+}
+
+// Define the shape of the nested bn object
+interface BNTranslations {
+  enable: string;
+  disable: string;
+  save: string;
+  discard: string;
+}
+
+// Define the shape of the feature translations
+interface FeatureTranslations {
+  unsaved: string;
+  error: ErrorTranslations;
+  bn: BNTranslations;
+}
+
+// Define the shape of the i18n configuration
+interface I18nConfig {
+  en: FeatureTranslations;
+  nl: FeatureTranslations;
+  cn: FeatureTranslations;
+}
+
+// Create the feature translations using createI18n function
+export const feature = createI18n<I18nConfig>(provider, {
   en: {
     unsaved: 'Save Changes',
     error: {
@@ -17,7 +48,7 @@ export const feature = createI18n(provider, {
       discard: 'Discard',
     },
   },
-    nl: {
+  nl: {
     unsaved: 'Save Changes',
     error: {
       'not enabled': 'Not Enabled',
