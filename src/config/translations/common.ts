@@ -1,7 +1,28 @@
 import { provider } from './provider';
 import { createI18n } from '@/utils/i18n';
 
-export const common = createI18n(provider, {
+// Define the shape of the common translations
+interface CommonTranslations {
+  loading: string;
+  search: string;
+  'select lang': string;
+  'select role': string;
+  'select channel': string;
+  dashboard: string;
+  profile: string;
+  pages: string;
+  logout: string;
+}
+
+// Define the shape of the i18n configuration
+interface I18nConfig {
+  en: CommonTranslations;
+  nl: CommonTranslations;
+  cn: CommonTranslations;
+}
+
+// Create the common translations using createI18n function
+export const common = createI18n<I18nConfig>(provider, {
   en: {
     loading: 'Loading',
     search: 'Search',
@@ -13,7 +34,7 @@ export const common = createI18n(provider, {
     pages: 'Pages',
     logout: 'Logout',
   },
-    nl: {
+  nl: {
     loading: 'Loading',
     search: 'Search',
     'select lang': 'Select your language',
