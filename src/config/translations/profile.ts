@@ -17,7 +17,6 @@ interface ProfileTranslations {
 // Define the shape of the i18n configuration
 interface I18nConfig {
   en: ProfileTranslations;
-  nl: ProfileTranslations;
   cn: ProfileTranslations;
 }
 
@@ -32,16 +31,6 @@ export const profile = createI18n<I18nConfig>(provider, {
     'dark mode description': 'Enables dark theme in order to protect your eyes',
     'dev mode': 'Developer Mode',
     'dev mode description': 'Used for debugging and testing',
-  },
-  nl: {
-    logout: common.nl.logout,
-    language: 'Taal',
-    'language description': 'Kies je Taal',
-    settings: 'Instellingen',
-    'dark mode': 'Donkere Modus',
-    'dark mode description': 'Zet Donkere Modus aan om je Ogen te beschermen',
-    'dev mode': 'Developer Mode',
-    'dev mode description': 'Gebruik dit om te Debuggen en te Testen',
   },
   cn: {
     logout: common.cn.logout,
