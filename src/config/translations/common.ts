@@ -17,7 +17,6 @@ interface CommonTranslations {
 // Define the shape of the i18n configuration
 interface I18nConfig {
   en: CommonTranslations;
-  nl: CommonTranslations;
   cn: CommonTranslations;
 }
 
