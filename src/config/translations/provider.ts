@@ -4,7 +4,7 @@ import Router, { useRouter } from 'next/router';
 /**
  * Supported languages
  */
-export type Languages = 'en' | 'nl' | 'cn';
+export type Languages = 'en'|'cn';
 
 export const { languages, names } = initLanguages<Languages>({
   en: 'English',
