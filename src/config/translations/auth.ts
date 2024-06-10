@@ -19,11 +19,6 @@ export const auth = createI18n<I18nConfig>(provider, {
     'login description': 'Login and start using our bot today',
     login_bn: 'Login with Discord',
   },
-  nl: {
-    login: 'Sign in',
-    'login description': 'Login and start using our bot today',
-    login_bn: 'Login with Discord',
-  },
   cn: {
     login: '登入控制面板',
     'login description': '登錄並開始使用我們的機器人',
