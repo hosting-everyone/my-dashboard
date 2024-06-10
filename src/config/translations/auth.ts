@@ -9,7 +9,6 @@ interface AuthTranslations {
 
 interface I18nConfig {
   en: AuthTranslations;
-  nl: AuthTranslations;
   cn: AuthTranslations;
 }
 
