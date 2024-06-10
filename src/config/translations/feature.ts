@@ -27,28 +27,12 @@ interface FeatureTranslations {
 // Define the shape of the i18n configuration
 interface I18nConfig {
   en: FeatureTranslations;
-  nl: FeatureTranslations;
   cn: FeatureTranslations;
 }
 
 // Create the feature translations using createI18n function
 export const feature = createI18n<I18nConfig>(provider, {
   en: {
-    unsaved: 'Save Changes',
-    error: {
-      'not enabled': 'Not Enabled',
-      'not enabled description': 'Try enable this feature?',
-      'not found': 'Not Found',
-      'not found description': "Hmm... Weird we can't find it",
-    },
-    bn: {
-      enable: 'Enable Feature',
-      disable: 'Disable',
-      save: 'Save',
-      discard: 'Discard',
-    },
-  },
-  nl: {
     unsaved: 'Save Changes',
     error: {
       'not enabled': 'Not Enabled',
